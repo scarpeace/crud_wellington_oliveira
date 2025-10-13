@@ -2,12 +2,12 @@
 
 - Nesse projeto foram utilizadas as seguintes tecnologias:
 
-  #JAVA
+# JAVA
     - Springboot
     - Springboot JPA
     - SpringWeb
     - MySQL / JPQL
     - JUnit + Mockito
  
- #ANGULAR
+# ANGULAR
  
