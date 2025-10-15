@@ -16,11 +16,12 @@ public class CarroService {
     @Autowired
     private CarroRepository carroRepo;
 
-    List<Carro> carros = new ArrayList<>();
 
     public String save(Carro carro){
+        this.verificarNomeCarro(carro.getNome(), carro.getAnoFabricacao());
+
         this.carroRepo.save(carro);
-        return "Carro salvo com sucesso!";
+        return carro.getNome() + " salvo com sucesso";
     }
 
     public List<Carro> getAll(){
@@ -38,6 +39,8 @@ public class CarroService {
     }
 
     public Carro update (Long id, Carro carro){
+        this.verificarNomeCarro(carro.getNome(), carro.getAnoFabricacao());
+
         Carro existingCarro = getById(id);
         existingCarro.setModelo(carro.getModelo());
         existingCarro.setMarca(carro.getMarca());
@@ -62,4 +65,9 @@ public class CarroService {
         return this.carroRepo.findAcimaAno(ano);
     }
 
+    public void verificarNomeCarro(String nome, int ano){
+        if(nome.equals("Jeep Compass") && ano < 2006){
+            throw new RuntimeException();
+        }
+    }
 }

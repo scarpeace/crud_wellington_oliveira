@@ -39,5 +39,4 @@ public class Carro {
     @JoinTable(name="carro_proprietario")
     private List<Proprietario> proprietarios;
 
-
 }
