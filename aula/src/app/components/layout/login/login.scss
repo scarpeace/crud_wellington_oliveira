@@ -1,0 +1,32 @@
+.login-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    button{
+        text-align: center;
+        width: 30%;
+        margin: auto;
+    }
+}
+
+.card {
+    width: 25rem;
+
+    .card-title{
+            margin-bottom: 2rem;
+    }
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.centralizar{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
